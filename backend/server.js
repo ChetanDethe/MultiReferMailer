@@ -12,6 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); // Serve uploaded files
+app.use(express.static('public')); // Add this if you have a public folder
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://chetandethe9999:12345@mycluster.vctxj.mongodb.net/', {

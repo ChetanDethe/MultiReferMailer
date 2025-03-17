@@ -16,26 +16,6 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 // Sign Up
-// router.post('/signup', async (req, res) => {
-//   const { firstName, lastName, email, password, appPassword } = req.body;
-//   try {
-//     const hashedPassword = await bcrypt.hash(password, 10);
-//     const hashedAppPassword = await bcrypt.hash(appPassword, 10);
-//     const newUser = new User({
-//       firstName,
-//       lastName,
-//       email,
-//       password: hashedPassword,
-//       appPassword: hashedAppPassword,
-//     });
-//     await newUser.save();
-//     res.status(201).json({ message: 'User created' });
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
-//   }
-// });
-
-// Sign Up
 router.post('/signup', async (req, res) => {
     const { firstName, lastName, email, password, appPassword } = req.body;
     try {
@@ -93,16 +73,6 @@ router.post('/update-template', async (req, res) => {
   }
 });
 
-// Upload CV
-// router.post('/upload-cv', upload.single('cv'), async (req, res) => {
-//   const { email } = req.body;
-//   try {
-//     await User.updateOne({ email }, { cv: req.file.path });
-//     res.json({ message: 'CV uploaded', path: req.file.path });
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
-//   }
-// });
 
 
 // Upload CV
