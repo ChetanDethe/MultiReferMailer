@@ -14,7 +14,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/auth/signup', {
+      await axios.post('https://multi-refer-mailer.vercel.app/api/auth/signup', {
         firstName,
         lastName,
         email,

@@ -9,13 +9,18 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors(
+  {
+    origin: 'https://multi-refer-mailer-du8vjrblx-chetan-dethes-projects.vercel.app',
+    credentials: true,
+  }
+));
 app.use(express.json());
 app.use('/uploads', express.static('uploads')); // Serve uploaded files
 app.use(express.static('public')); // Add this if you have a public folder
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://chetandethe9999:12345@mycluster.vctxj.mongodb.net/', {
+mongoose.connect('mongodb+srv://chetandethe9999:12345@mycluster.vctxj.mongodb.net/MultiReferMailerDB?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

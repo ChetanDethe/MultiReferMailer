@@ -67,7 +67,7 @@ const CVUpload = ({ email }) => {
   useEffect(() => {
     const fetchPreviousCv = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/auth/user/${email}`);
+        const res = await axios.get(`https://multi-refer-mailer.vercel.app/api/auth/user/${email}`);
         if (res.data.cv) {
           setPreviousCvPath(res.data.cv);
         }
