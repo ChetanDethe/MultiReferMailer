@@ -14,7 +14,7 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads')); // Serve uploaded files
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/MultiReferMailerDB', {
+mongoose.connect('mongodb+srv://chetandethe9999:12345@mycluster.vctxj.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
